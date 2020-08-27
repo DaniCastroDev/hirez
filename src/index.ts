@@ -306,7 +306,7 @@ export class Smite extends HirezAbstract {
     );
   }
 
-  getGods(): God[] {
+  getGods(): Promise<God[]> {
     return this.request_("getgods", this.lang);
   }
 
