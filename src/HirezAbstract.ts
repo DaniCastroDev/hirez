@@ -2,6 +2,7 @@ import * as moment from "moment";
 import * as md5 from "md5";
 import fetch from "node-fetch";
 import {HIREZAPI, LANGUAGE} from "./enums/base_enums";
+import Item from "./interfaces/item_interface";
 
 export default class HirezAbstract {
     protected readonly lang: LANGUAGE;
@@ -39,7 +40,7 @@ export default class HirezAbstract {
         return this.request_("getdataused");
     }
 
-    getItems() {
+    getItems(): Promise<Item> {
         return this.request_("getitems", this.lang);
     }
 
