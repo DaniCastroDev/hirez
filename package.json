@@ -12,7 +12,10 @@
     "type": "git",
     "url": "git+https://gitlab.com/JoShMiQueL/hirez-api.git"
   },
-  "homepage": "",
+  "homepage": "https://gitlab.com/JoShMiQueL/hirez-api/-/blob/master/README.md",
+  "bugs": {
+    "url": "https://gitlab.com/JoShMiQueL/hirez-api/-/issues"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -23,6 +26,8 @@
     "typescript": "^4.0.2"
   },
   "dependencies": {
+    "@types/md5": "^2.2.0",
+    "@types/node-fetch": "^2.5.7",
     "md5": "^2.3.0",
     "moment": "^2.27.0",
     "node-fetch": "^2.6.0"

@@ -171,14 +171,14 @@ class HirezAbstract {
     }
 
     private fetch_(path: string) {
-        return fetch(this.baseUrl + path).then(response => response.json());
+        return fetch(this.baseUrl + path).then((response: { json: () => any; }) => response.json());
     }
 
     private session(): any {
         if (this.session_) {
             return this.session_;
         } else {
-            return this.session_ = this.fetch_(`/createsession${this.format}/${this.devId}/${this.signature_('createsession')}/${this.timestamp_()}`).then(data => {
+            return this.session_ = this.fetch_(`/createsession${this.format}/${this.devId}/${this.signature_('createsession')}/${this.timestamp_()}`).then((data: { session_id: any; }) => {
                 setTimeout(() => {
                     delete this.session_;
                 }, HIREZAPI.SESSION_DURATION);
