@@ -1,9 +1,10 @@
 {
-  "name": "@joshmiquel/hirez-api",
-  "version": "1.0.0",
+  "name": "@joshmiquel/hirez",
+  "version": "2.0.0",
   "description": "Hirez API",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "private": false,
   "scripts": {
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
@@ -15,7 +16,7 @@
     "type": "git",
     "url": "git+https://gitlab.com/JoShMiQueL/hirez-api.git"
   },
-  "homepage": "https://gitlab.com/JoShMiQueL/hirez-api/-/blob/master/README.md",
+  "homepage": "https://gitlab.com/JoShMiQueL/hirez-api/-/tree/master",
   "bugs": {
     "url": "https://gitlab.com/JoShMiQueL/hirez-api/-/issues"
   },
