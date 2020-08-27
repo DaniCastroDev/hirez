@@ -1,6 +1,6 @@
 {
   "name": "@joshmiquel/hirez",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Hirez API",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -16,7 +16,7 @@
     "type": "git",
     "url": "git+https://gitlab.com/JoShMiQueL/hirez-api.git"
   },
-  "homepage": "https://gitlab.com/JoShMiQueL/hirez-api/-/tree/master",
+  "homepage": "https://gitlab.com/JoShMiQueL/hirez-api#readme",
   "bugs": {
     "url": "https://gitlab.com/JoShMiQueL/hirez-api/-/issues"
   },
