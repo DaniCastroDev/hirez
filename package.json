@@ -1,6 +1,6 @@
 {
   "name": "@joshmiquel/hirez",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "Hirez API",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -23,7 +23,13 @@
   "files": [
     "lib/**/*"
   ],
-  "keywords": ["smite", "paladins", "hirez", "moba", "game"],
+  "keywords": [
+    "smite",
+    "paladins",
+    "hirez",
+    "moba",
+    "game"
+  ],
   "author": "JoShMiQueL",
   "license": "MIT",
   "devDependencies": {
