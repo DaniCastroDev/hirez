@@ -57,7 +57,7 @@ export default interface God {
     godIcon_URL: string;
     id: number;
     latestGod: string;
-    ret_msg: string;
+    ret_msg: string | null;
 }
 
 interface Ability {

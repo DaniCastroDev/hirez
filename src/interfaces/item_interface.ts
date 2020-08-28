@@ -13,7 +13,7 @@ export default interface Item {
     StartingItem:    boolean;
     Type:            string;
     itemIcon_URL:    string;
-    ret_msg:         string;
+    ret_msg:         string | null;
 }
 
 interface ItemDescription {
