@@ -72,12 +72,12 @@ export default class HirezAbstract {
         return this.request_("getplayer", player);
     }
 	
-	getPlayerById(player: string) {
-        return this.request_("getplayerbyid", player);
+	getPlayerIdByName(player: string) {
+        return this.request_("getplayeridbyname", player);
     }
 	
-	getPlayerByGamertag(platform: string, player: string) {
-        return this.request_("getplayerbyid", platform, player);
+	getPlayerIdsByGamertag(platform: string, player: string) {
+        return this.request_("getplayeridsbygamertag", platform, player);
     }
 
     getPlayerStatus(player: string) {
