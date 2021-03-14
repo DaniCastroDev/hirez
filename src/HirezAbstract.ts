@@ -81,7 +81,7 @@ export default class HirezAbstract {
     }
 
     searchPlayer(player: string) {
-        return this.request_("searchplayer", player);
+        return this.request_("searchplayers", player);
     }
 
     getPlayerStatus(player: string) {
