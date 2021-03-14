@@ -80,7 +80,7 @@ export default class HirezAbstract {
         return this.request_("getplayeridsbygamertag", platform, player);
     }
 
-    searchPlayer(player: string) {
+    searchPlayers(player: string) {
         return this.request_("searchplayers", player);
     }
 
