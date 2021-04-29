@@ -1,7 +1,7 @@
 import * as moment from "moment";
 import * as md5 from "md5";
 import fetch from "node-fetch";
-import {HIREZAPI, LANGUAGE} from "./enums/base_enums";
+import { HIREZAPI, LANGUAGE } from "./enums/base_enums";
 import Item from "./interfaces/item_interface";
 
 export default class HirezAbstract {
@@ -71,12 +71,12 @@ export default class HirezAbstract {
     getPlayer(player: string) {
         return this.request_("getplayer", player);
     }
-	
-	getPlayerIdByName(player: string) {
+
+    getPlayerIdByName(player: string) {
         return this.request_("getplayeridbyname", player);
     }
-	
-	getPlayerIdsByGamertag(platform: string, player: string) {
+
+    getPlayerIdsByGamertag(platform: string, player: string) {
         return this.request_("getplayeridsbygamertag", platform, player);
     }
 
@@ -162,8 +162,27 @@ export default class HirezAbstract {
         );
     }
 
+    private reconnectSession(): any {
+        return (this.session_ = this.fetch_(
+            `/createsession${this.format}/${this.devId}/${this.signature_(
+                "createsession"
+            )}/${HirezAbstract.timestamp_()}`
+        ).then(data => {
+            setTimeout(() => {
+                delete this.session_;
+            }, HIREZAPI.SESSION_DURATION);
+            return data.session_id;
+        },
+            () => {
+                delete this.session_;
+                return this.session();
+            }
+        ));
+    }
+
     private session(): any {
         if (this.session_) {
+            console.log(this.session_);
             return this.session_;
         } else {
             return (this.session_ = this.fetch_(
@@ -171,13 +190,15 @@ export default class HirezAbstract {
                     "createsession"
                 )}/${HirezAbstract.timestamp_()}`
             ).then(data => {
-                    setTimeout(() => {
-                        delete this.session_;
-                    }, HIREZAPI.SESSION_DURATION);
-                    return data.session_id;
-                },
+                setTimeout(() => {
+                    delete this.session_;
+                }, HIREZAPI.SESSION_DURATION);
+                console.log('Session: '+data.session_id);
+                return data.session_id;
+            },
                 () => {
                     delete this.session_;
+                    console.log('Retrying session');
                     return this.session();
                 }
             ));
