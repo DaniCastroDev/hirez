@@ -16,13 +16,13 @@ export enum LANGUAGE {
 }
 
 export enum SMITE_ENDPOINT {
-    PC = "http://api.smitegame.com/smiteapi.svc",
-    Xbox = "http://api.xbox.smitegame.com/smiteapi.svc",
-    PS4 = "http://api.ps4.smitegame.com/smiteapi.svc"
+    PC = "https://api.smitegame.com/smiteapi.svc",
+    Xbox = "https://api.xbox.smitegame.com/smiteapi.svc",
+    PS4 = "https://api.ps4.smitegame.com/smiteapi.svc"
 }
 
 export enum PALADINS_ENDPOINT {
-    PC = "http://api.paladins.com/paladinsapi.svc",
-    Xbox = "http://api.xbox.paladins.com/paladinsapi.svc",
-    PS4 = "http://api.ps4.paladins.com/paladinsapi.svc"
+    PC = "https://api.paladins.com/paladinsapi.svc",
+    Xbox = "https://api.xbox.paladins.com/paladinsapi.svc",
+    PS4 = "https://api.ps4.paladins.com/paladinsapi.svc"
 }
