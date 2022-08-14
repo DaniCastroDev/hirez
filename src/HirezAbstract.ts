@@ -16,7 +16,7 @@ export default class HirezAbstract {
         this.baseUrl = baseUrl;
         this.devId = devId;
         this.authKey = authKey;
-        this.format = "Json";
+        this.format = "json";
         this.lang = lang || LANGUAGE.ENGLISH;
     }
 
